@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MRC की कहानी – असली फर्क कैसे दिखता है?</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--a:#5b3df5;--t:#fff3c4;color-scheme:light}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%}
+body{font-family:'Baloo 2','Noto Sans Devanagari',system-ui,sans-serif;background:#1d1646;color:#1d1646;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:10px;overflow:hidden}
+#wrap{position:relative;perspective:2200px;width:min(96vw,480px);height:min(78vh,660px)}
+#pg,.front{height:100%;background:var(--t);border:4px solid var(--a);border-radius:10px 22px 22px 10px;box-shadow:-10px 8px 0 var(--a);padding:18px 18px 22px;overflow-y:auto;font-size:17px;line-height:1.55;transform-origin:left center}
+.tag{display:inline-block;background:var(--a);color:#fff;border-radius:99px;padding:1px 14px;font-size:14px}
+h1{font-size:30px;line-height:1.2;margin:8px 0 10px;color:var(--a)}
+h2{font-size:23px;line-height:1.25;margin:8px 0 8px;color:var(--a)}
+p{margin:6px 0}
+.b{display:flex;gap:10px;align-items:flex-start;margin:12px 0}
+.b i{font-style:normal;font-size:38px;text-align:center;line-height:1;flex:none;width:62px}
+.b small{display:block;font-size:12px;line-height:1.1;margin-top:2px}
+.b p{background:#fff;border:2px solid var(--a);border-radius:4px 16px 16px 16px;padding:7px 12px;margin:0}
+.box{background:#fff;border:2px dashed var(--a);border-radius:14px;padding:8px 12px;margin:9px 0}
+.row{display:flex;gap:8px}.row>*{flex:1}
+.big{font-size:40px;line-height:1.1;color:var(--a);font-weight:700}
+.q{display:flex;gap:8px;align-items:center;margin:6px 0}.q b{background:var(--a);color:#fff;border-radius:50%;width:26px;height:26px;display:grid;place-items:center;flex:none;font-size:14px}
+.chips span{display:inline-block;background:var(--a);color:#fff;border-radius:99px;padding:0 12px;margin:3px 2px}
+.cast{display:grid;grid-template-columns:1fr 1fr;gap:8px}.cast div{background:#fff;border:2px solid var(--a);border-radius:14px;padding:6px;text-align:center;font-size:14px;line-height:1.3}.cast em{display:block;font-size:34px;font-style:normal}
+details{background:#fff;border:2px solid var(--a);border-radius:12px;padding:8px 12px;margin:10px 0}summary{cursor:pointer;font-weight:700;color:var(--a)}
+.step{margin:4px 0;padding:5px 12px;border-radius:10px;background:#fff;border-left:8px solid var(--a)}
+nav{display:flex;align-items:center;gap:12px;color:#fff}
+button{font:inherit;font-size:20px;background:#ffd23f;color:#1d1646;border:0;border-radius:99px;padding:2px 22px;cursor:pointer}
+button:focus-visible{outline:3px solid #fff}button:disabled{opacity:.35}
+#bar{width:min(96vw,480px);height:6px;background:#ffffff33;border-radius:9px}#bar div{height:100%;background:#ffd23f;border-radius:9px;transition:width .3s}
+.p0{--a:#5b3df5;--t:#e9e4ff}.p1{--a:#e8590c;--t:#fff0dc}.p2{--a:#0b8a83;--t:#dcf7f3}.p3{--a:#b5179e;--t:#ffe3f6}.p4{--a:#2b8a3e;--t:#e3f8dd}
+.front,.back{position:absolute;inset:0}.front{backface-visibility:hidden}
+.leaf{position:absolute;inset:0;transform-style:preserve-3d;transform-origin:left center;z-index:3;will-change:transform}
+.back{backface-visibility:hidden;transform:rotateY(180deg);border:4px solid var(--a);border-radius:22px 10px 10px 22px;background:repeating-linear-gradient(0deg,transparent 0 31px,#0001 31px 32px),var(--t);box-shadow:inset 22px 0 30px -14px #0006}
+.shade{position:absolute;inset:0;z-index:2;pointer-events:none;border-radius:10px 22px 22px 10px;background:linear-gradient(90deg,#000a,transparent 75%);opacity:0}
+.av{width:64px;height:64px;display:block;margin:0 auto;overflow:visible}
+.hero{display:flex;justify-content:center;gap:2px;margin-top:16px}.hero .av{width:min(68px,16vw);margin:0}.cast .av{width:72px;height:72px}
+#pg>*{animation:pop .5s both}.quiet>*,.quiet svg{animation:none!important}
+.b svg{animation:wig .7s .7s}.hero svg{animation:bob 2.2s ease-in-out infinite}.hero svg:nth-child(2){animation-delay:.25s}.hero svg:nth-child(3){animation-delay:.5s}.hero svg:nth-child(4){animation-delay:.75s}.hero svg:nth-child(5){animation-delay:1s}
+@keyframes pop{from{opacity:0;transform:translateY(16px) scale(.95)}to{opacity:1;transform:none}}
+@keyframes wig{0%,100%{transform:none}30%{transform:rotate(-9deg) scale(1.1)}65%{transform:rotate(7deg)}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<g id="fc"><ellipse cx="40" cy="44" rx="3.2" ry="4.2" fill="#2b1b17"/><ellipse cx="60" cy="44" rx="3.2" ry="4.2" fill="#2b1b17"/><circle cx="41.3" cy="42.5" r="1.3" fill="#fff"/><circle cx="61.3" cy="42.5" r="1.3" fill="#fff"/><path d="M42 53q8 9 16 0z" fill="#7a1f2b" stroke="#2b1b17" stroke-width="1.6" stroke-linejoin="round"/><circle cx="33" cy="52" r="4.5" fill="#ff6f61" opacity=".4"/><circle cx="67" cy="52" r="4.5" fill="#ff6f61" opacity=".4"/></g>
+<symbol id="R" viewBox="0 0 100 100"><path d="M16 100q0-27 34-27t34 27z" fill="#2f6fed"/><path d="M16 100q0-27 34-27t34 27" fill="none" stroke="#1e4fc0" stroke-width="3"/><rect x="43" y="62" width="14" height="16" rx="5" fill="#b8703f"/><path d="M40 74l10 12 10-12z" fill="#fff"/><path d="M42 75l22 9" stroke="#ffd23f" stroke-width="2.4"/><rect x="60" y="82" width="13" height="15" rx="2.5" fill="#ffd23f"/><circle cx="66.5" cy="87" r="2.4" fill="#2f6fed"/><circle cx="26" cy="46" r="4.5" fill="#c27c48"/><circle cx="74" cy="46" r="4.5" fill="#c27c48"/><ellipse cx="50" cy="44" rx="24" ry="27" fill="#d08a54"/><path d="M25 44q-3-30 25-30t25 30q-5-15-25-16T25 44z" fill="#1b1210"/><path d="M34 37q5-3 10 0M56 37q5-3 10 0" stroke="#1b1210" stroke-width="2.2" fill="none" stroke-linecap="round"/><use href="#fc"/></symbol>
+<symbol id="D" viewBox="0 0 100 100"><circle cx="50" cy="12" r="10" fill="#1b1210"/><path d="M14 100q0-27 36-27t36 27z" fill="#d6246e"/><path d="M14 100q0-10 7-17l14 17z" fill="#ffd23f"/><path d="M30 76l42 24H54z" fill="#a4175a"/><path d="M40 74q10 12 20 0" fill="#7d103f"/><rect x="43" y="62" width="14" height="16" rx="5" fill="#a96a40"/><circle cx="27" cy="47" r="4.5" fill="#b9774a"/><circle cx="73" cy="47" r="4.5" fill="#b9774a"/><circle cx="27" cy="53" r="2.4" fill="#ffd23f"/><circle cx="73" cy="53" r="2.4" fill="#ffd23f"/><ellipse cx="50" cy="45" rx="23" ry="27" fill="#c6855a"/><path d="M26 46q-3-30 24-30t24 30q-4-17-22-18-3 8-6 8-6-1-20 10z" fill="#1b1210"/><circle cx="50" cy="32" r="2.4" fill="#e11d48"/><path d="M34 38q5-3 10 0M56 38q5-3 10 0" stroke="#1b1210" stroke-width="2.2" fill="none" stroke-linecap="round"/><use href="#fc"/></symbol>
+<symbol id="K" viewBox="0 0 100 100"><path d="M22 100q0-22 28-22t28 22z" fill="#ff8f1f"/><path d="M50 86l2.5 5 5.5.8-4 4 1 5.5-5-2.6-5 2.6 1-5.5-4-4 5.5-.8z" fill="#fff"/><rect x="44" y="70" width="12" height="12" rx="4" fill="#c98a5a"/><circle cx="23" cy="52" r="5" fill="#d9a070"/><circle cx="77" cy="52" r="5" fill="#d9a070"/><circle cx="50" cy="48" r="28" fill="#e0a877"/><path d="M22 46q0-28 28-28t28 28q-8-13-28-13T22 46z" fill="#2a1810"/><path d="M42 21l8-14 8 14z" fill="#2a1810"/><g transform="translate(0 5)"><use href="#fc"/></g></symbol>
+<symbol id="H" viewBox="0 0 100 100"><path d="M36 90v8M64 90v8" stroke="#0b8a83" stroke-width="7" stroke-linecap="round"/><path d="M33 98h8M59 98h8" stroke="#1d1646" stroke-width="5" stroke-linecap="round"/><path d="M27 64q-14 3-12 18M73 64q14 3 12 18" stroke="#0b8a83" stroke-width="6" stroke-linecap="round" fill="none"/><circle cx="15" cy="84" r="5" fill="#ffd23f"/><circle cx="85" cy="84" r="5" fill="#ffd23f"/><rect x="24" y="12" width="52" height="80" rx="13" fill="#0b8a83"/><rect x="30" y="19" width="40" height="55" rx="8" fill="#eafffb"/><circle cx="50" cy="83" r="4.5" fill="#bff0ea"/><g transform="translate(50 46) scale(.62) translate(-50 -46)"><use href="#fc"/></g><path d="M20 40q0-30 30-30t30 30" fill="none" stroke="#ffd23f" stroke-width="5"/><rect x="14" y="36" width="10" height="18" rx="5" fill="#ffd23f"/><rect x="76" y="36" width="10" height="18" rx="5" fill="#ffd23f"/><path d="M80 52q3 16-16 18" stroke="#ffd23f" stroke-width="3" fill="none"/><circle cx="63" cy="70" r="3.6" fill="#ffd23f"/></symbol>
+<symbol id="G" viewBox="0 0 100 100"><path d="M40 94l-3 5M50 94v5M60 94l3 5" stroke="#ff9f1c" stroke-width="3.5" stroke-linecap="round"/><ellipse cx="50" cy="62" rx="33" ry="33" fill="#8a5a2b"/><ellipse cx="19" cy="66" rx="9" ry="19" fill="#6f4620" transform="rotate(10 19 66)"/><ellipse cx="81" cy="66" rx="9" ry="19" fill="#6f4620" transform="rotate(-10 81 66)"/><ellipse cx="50" cy="72" rx="21" ry="22" fill="#ecc98f"/><path d="M38 64q4 4 8 0M54 64q4 4 8 0M38 76q4 4 8 0M54 76q4 4 8 0M46 84q4 4 8 0" stroke="#b98a4b" stroke-width="2" fill="none"/><path d="M24 36l3-16 14 12zM76 36l-3-16-14 12z" fill="#8a5a2b"/><circle cx="37" cy="46" r="14" fill="#fff"/><circle cx="63" cy="46" r="14" fill="#fff"/><circle cx="38" cy="47" r="6.5" fill="#2b1b17"/><circle cx="62" cy="47" r="6.5" fill="#2b1b17"/><circle cx="40" cy="44.5" r="2" fill="#fff"/><circle cx="64" cy="44.5" r="2" fill="#fff"/><circle cx="37" cy="46" r="15" fill="none" stroke="#1d1646" stroke-width="2.6"/><circle cx="63" cy="46" r="15" fill="none" stroke="#1d1646" stroke-width="2.6"/><path d="M51 45h-2" stroke="#1d1646" stroke-width="2.6"/><path d="M45 57l5 9 5-9z" fill="#ff9f1c"/><path d="M34 26v-8q16 8 32 0v8q-16 8-32 0z" fill="#2b2a63"/><path d="M18 20l32-13 32 13-32 13z" fill="#1d1646"/><path d="M78 22v14" stroke="#ffd23f" stroke-width="2.2"/><circle cx="78" cy="38" r="3" fill="#ffd23f"/></symbol>
+</defs></svg>
+<div id="wrap"><div id="pg" tabindex="0" aria-live="polite"></div></div>
+<div id="bar"><div></div></div>
+<nav><button id="pv" aria-label="पिछला पन्ना">◀</button><span id="ct"></span><button id="nx" aria-label="अगला पन्ना">▶</button></nav>
+<script>
+const av=k=>`<svg class="av" viewBox="0 0 100 100" aria-hidden="true"><use href="#${k}"/></svg>`;
+const C={R:[av('R'),'राजू भैया'],D:[av('D'),'रानी दीदी'],K:[av('K'),'छोटू'],H:[av('H'),'हेल्पू'],G:[av('G'),'गुरु उल्लू']};
+const s=(c,t)=>`<div class="b"><i>${C[c][0]}<small>${C[c][1]}</small></i><p>${t}</p></div>`;
+const q=(n,t)=>`<div class="q"><b>${n}</b><span>${t}</span></div>`;
+const bx=t=>`<div class="box">${t}</div>`;
+const P=[
+['p0','','MRC की कहानी: असली फर्क कैसे दिखता है?',`<p class="hero"><svg class="av" viewBox="0 0 100 100" aria-hidden="true"><use href="#R"/></svg><svg class="av" viewBox="0 0 100 100" aria-hidden="true"><use href="#D"/></svg><svg class="av" viewBox="0 0 100 100" aria-hidden="true"><use href="#K"/></svg><svg class="av" viewBox="0 0 100 100" aria-hidden="true"><use href="#H"/></svg><svg class="av" viewBox="0 0 100 100" aria-hidden="true"><use href="#G"/></svg></p>${s('R','नमस्ते! मैं राजू हूं। चलिए, पांच दोस्तों के साथ MRC के काम को कहानी की तरह समझते हैं। बस पन्ना पलटते जाइए!')}<p style="text-align:center">पन्ना पलटें: ▶ बटन, ← → कीज़, या स्वाइप करें</p>`],
+['p0','पहले मिलिए','हमारी टीम से',`<div class="cast"><div><em><svg class="av" viewBox="0 0 100 100" aria-hidden="true"><use href="#R"/></svg></em><b>राजू भैया</b><br>फील्ड टीम के साथी, आपके गाइड</div><div><em><svg class="av" viewBox="0 0 100 100" aria-hidden="true"><use href="#D"/></svg></em><b>रानी दीदी</b><br>कम्युनिटी वॉलंटियर, पहले डरती थीं</div><div><em><svg class="av" viewBox="0 0 100 100" aria-hidden="true"><use href="#K"/></svg></em><b>छोटू</b><br>सबसे जिज्ञासु बच्चा</div><div><em><svg class="av" viewBox="0 0 100 100" aria-hidden="true"><use href="#H"/></svg></em><b>हेल्पू</b><br>मजदूर हेल्पलाइन का दोस्त</div></div><div class="cast" style="margin-top:8px;grid-template-columns:1fr"><div><em><svg class="av" viewBox="0 0 100 100" aria-hidden="true"><use href="#G"/></svg></em><b>गुरु उल्लू</b> – हर पार्ट के आखिर में याद रखने वाली बात बताता है</div></div>`],
+['p1','पार्ट 1 · MRC का काम','हम रोज़ क्या करते हैं?',`${s('R','गांव जाना, परिवारों को रजिस्टर करना, स्कीम दिलाना, हेल्पलाइन बताना। ये सब एक बड़े मकसद से जुड़े हैं।')}<p>MRC प्रवासी मजदूरों और उनके परिवारों के साथ काम करता है, ताकि वो अलग-अलग जोखिमों से खुद को बचा सकें।</p><div class="row">${bx('<b>सोशल सिक्योरिटी</b><br>स्कीम समझाना, सही स्कीम चुनना, आवेदन पूरा करवाना और स्वास्थ्य, शिक्षा, आमदनी, भविष्य से बचाव तक ले जाना')}${bx('<b>वर्कर प्रोटेक्शन</b><br>अधिकार बताना, मजदूरी न मिलना, दुर्घटना, उत्पीड़न, बंधुआ मजदूरी पहचानना और हेल्पलाइन तक पहुंचाना')}</div>${s('H','रजिस्ट्रेशन और जागरूकता आखिरी मकसद नहीं, कदम हैं!')}`],
+['p1','पार्ट 1 · चार सवाल','छोटू की मां की कहानी',`<p>छोटू को बुखार आया। मां उसे क्लिनिक ले गई। डॉक्टर ने दवा दी। दो दिन में बुखार ठीक, छोटू फिर खेलने लगा।</p>${s('K','मेरा स्कूल भी नहीं छूटा, और मैं मजबूत बना!')}<p>अब इसी कहानी से चार सवाल:</p>${q(1,'<b>हमने क्या किया?</b> बच्चे को क्लिनिक ले गए')}${q(2,'<b>हमने क्या दिया?</b> दवा')}${q(3,'<b>क्या बदला?</b> बुखार ठीक हुआ')}${q(4,'<b>बड़ा फर्क क्या हुआ?</b> बच्चा स्कूल में बना रहा, मजबूत बना')}`],
+['p1','पार्ट 1 · चार सवाल','अब अपने काम पर पूछें',`${s('D','मेरे परिवार को स्कीम में रजिस्टर करवाते समय राजू भैया ने यही चार सवाल पूछे थे।')}${q(1,'<b>क्या किया?</b> गांव गए, मदद की')}${q(2,'<b>क्या दिया?</b> फॉर्म भरवाया')}${q(3,'<b>क्या बदला?</b> परिवार रजिस्टर हुआ और अगली बार खुद रिन्यू करना सीखा')}${q(4,'<b>बड़ा फर्क?</b> परिवार अब एक से ज़्यादा खतरों से सुरक्षित है। यही असली रेज़िलियंस है!')}${s('G','याद रखें: क्या किया, यह गिनना आसान है। क्या बदला, यह देखना ज़्यादा ज़रूरी है।')}`],
+['p2','पार्ट 2 · दो लक्ष्य','पहुंच और रेज़िलियंस',`<p>हमारे काम के दो लक्ष्य हैं, और दोनों साथ में ज़रूरी हैं।</p>${bx('<b>1. पहुंच</b><br>ज़्यादा से ज़्यादा परिवार रजिस्टर हों और समय के साथ एक आसान स्कीम से आगे बढ़कर स्वास्थ्य, शिक्षा, आमदनी, भविष्य के मौकों से सुरक्षित हों।')}${bx('<b>2. प्रोटेक्शन अवेयरनेस</b><br>लोगों को हेल्पलाइन पता हो, ताकि मजदूरी रुकना, दुर्घटना, उत्पीड़न, बंधुआ मजदूरी दर्ज हो और मदद मिल सके।')}${s('H','मैं तभी काम आ सकता हूं जब लोगों को मेरे बारे में पता हो!')}`],
+['p2','पार्ट 2 · एक उदाहरण','गांव A बनाम गांव B',`<p>इस महीने रजिस्ट्रेशन:</p><div class="row">${bx('<b>गांव A</b><div class="big">500</div>घर')}${bx('<b>गांव B</b><div class="big">300</div>घर')}</div>${s('R','सिर्फ संख्या देखें तो गांव A आगे है, और यह सही भी है। पहुंच मायने रखती है।')}${s('K','तो बस हो गया? A जीत गया?')}${s('R','रुको छोटू, दूसरी जानकारी भी देखते हैं। अगला पन्ना पलटो!')}`],
+['p2','पार्ट 2 · दूसरी जानकारी','कौन सा गांव आगे?',`<div class="row">${bx('<b>गांव A</b><br>लगभग सभी 500 घर सिर्फ एक, सबसे आसान स्कीम में। बहुत कम लोगों को हेल्पलाइन पता है।')}${bx('<b>गांव B</b><br>कई घर अब तीसरी स्कीम में भी, जो अलग खतरे से बचाती है। ज़्यादातर लोग हेल्पलाइन जानते हैं।')}</div>${s('H','गांव B के दो परिवारों ने मजदूरी रुकने पर मुझे कॉल किया, और उनकी मदद हुई!')}<details><summary>सोचिए: दोनों लक्ष्य साथ देखें तो कौन आगे? (टैप करें)</summary><p>गांव B! उसकी टीम ने महीने की शुरुआत से सोचा था कि कौन सा बड़ा फर्क लाना है, सिर्फ टारगेट नहीं। संख्या मायने रखती है, पर वह अकेले नहीं बताती कि परिवार सुरक्षित हैं या नहीं।</p></details>`],
+['p3','पार्ट 3 · प्रोग्राम इंडिकेटर्स','हम काम को कैसे मापते हैं? (1-3)',`${s('R','MRC के छह मुख्य इंडिकेटर्स हैं। पहले तीन:')}${bx('<b>1. तीन या ज़्यादा बेनिफिट्स की क्वालिटी</b><br>कम से कम तीन बेनिफिट्स, अलग-अलग खतरों को कवर करें (स्वास्थ्य, शिक्षा, आमदनी, भविष्य), और कम से कम एक तिहाई DBT या इन-काइंड।')}${bx('<b>2. सैचुरेशन और कम्युनिटी ओनरशिप</b><br>परिवार खुद सरकारी दफ्तर जा सके, दूसरों की मदद करे, और कोई लोकल व्यक्ति या संस्था हमारे बिना भी मदद जारी रखे।')}${bx('<b>3. डेस्टिनेशन पर BOCW रजिस्ट्रेशन</b><br>एक कार्ड से कई जुड़े हुए बेनिफिट्स तक पहुंच।')}`],
+['p3','पार्ट 3 · प्रोग्राम इंडिकेटर्स','और तीन इंडिकेटर्स (4-6)',`${bx('<b>4. डेस्टिनेशन ओनरशिप और सिस्टम मजबूती</b><br>इंडस्ट्री या पार्टनर खुद मजदूरों के अधिकार, सुरक्षा और शिकायत निवारण की जिम्मेदारी लें।')}${bx('<b>5. बेनिफिट रियलाइज़ेशन</b><br>कार्ड बनना काफी नहीं। असली बदलाव तब, जब इलाज करवाया या राशन लिया।')}${bx('<b>6. लोगों, टीम और कम्युनिटी में बदलाव</b><br>कॉन्फिडेंस, समझ, व्यवहार और फैसला लेने की क्षमता में सुधार।')}${s('R','जैसे हमारी रानी दीदी, जो पहले डरती थीं!')}${s('D','अब मैं खुद दूसरी महिलाओं को साथ लेकर सरकारी दफ्तर जाती हूं!')}`],
+['p3','पार्ट 3 · आउटपुट बनाम आउटकम','कार्ड बनना बनाम कार्ड काम आना',`<div class="row">${bx('<b>आउटपुट</b><br>कार्ड बनना, रजिस्ट्रेशन होना')}${bx('<b>आउटकम</b><br>असली इस्तेमाल, खुद एक्शन लेना, ओनरशिप')}</div>${s('K','दीदी, कार्ड तो बन गया। अब दवा कब मिलेगी?')}${s('D','जब हम उसे इस्तेमाल करेंगे छोटू। तभी तो असली फर्क आएगा!')}${s('G','याद रखें: कार्ड बनना आउटपुट है। उसका इस्तेमाल, आज़ादी से एक्शन और ओनरशिप, यही आउटकम है, और यही असली फर्क की तरफ ले जाता है।')}`],
+['p4','पार्ट 4 · लर्निंग साइकल','मेज़र से मेज़र तक',`<p>मॉनिटरिंग सिर्फ नंबर इकट्ठा करना नहीं है। नतीजों पर बात करें, सीखें और सुधारें।</p><div class="chips"><span>मेज़र</span>→<span>रिफ्लेक्ट</span>→<span>लर्न</span>→<span>इम्प्रूव</span>→<span>इम्प्लीमेंट</span>→<span>फिर मेज़र</span></div>${s('R','हमने देखा: 20 परिवारों को तीन बेनिफिट्स मिले, लेकिन सारे सिर्फ हेल्थ स्कीम से!')}${s('D','तो शिक्षा, आमदनी, भविष्य के खतरे अब भी खुले हैं।')}${s('R','सीख: सिर्फ नंबर पूरा करना काफी नहीं। अब हम अलग-अलग खतरों के हिसाब से ज़रूरत समझेंगे, लागू करेंगे और दोबारा मापेंगे।')}`],
+['p4','पार्ट 4 · बैकवर्ड प्लानिंग','उल्टी दिशा में प्लानिंग',`<p>नया काम प्लान करते समय पीछे की तरफ से सोचें, यानी इम्पैक्ट से इनपुट तक:</p><div class="step">⭐ <b>बड़ा फर्क</b> क्या चाहिए?</div><div class="step" style="margin-left:14px">🔄 <b>क्या बदलना</b> चाहिए?</div><div class="step" style="margin-left:28px">🎁 <b>क्या देना</b> होगा?</div><div class="step" style="margin-left:42px">🚶 <b>क्या करना</b> होगा?</div><div class="step" style="margin-left:56px">🧰 <b>कौन से इनपुट्स</b> चाहिए?</div>${s('K','यानी पहले मंज़िल, फिर रास्ता!')}`],
+['p4','पार्ट 4 · क्लोज़िंग','मंज़िल नहीं, रास्ता',`${s('G','रजिस्ट्रेशन, आवेदन, बेनिफिट्स और अवेयरनेस सेशन ज़रूरी हैं, लेकिन ये मंज़िल नहीं, रास्ता हैं।')}<p>असली फर्क तब दिखता है जब:</p>${q('✓','परिवार अलग-अलग खतरों से सुरक्षित हों')}${q('✓','लोग अपने बेनिफिट्स का इस्तेमाल करें')}${q('✓','मजदूर अपने अधिकार अपनाएं')}${q('✓','कम्युनिटी और पार्टनर खुद जिम्मेदारी लें')}${s('H','सब मिलकर बोलो: क्या बदला?')}${bx('<b>कल से आपकी चुनौती:</b> अपने काम में एक ऐसा बदलाव ढूंढिए जो सिर्फ काम नहीं, असली फर्क दिखाए। 🌟')}`]
+];
+const pg=document.getElementById('pg'),wrap=document.getElementById('wrap'),pv=document.getElementById('pv'),nx=document.getElementById('nx');
+let i=0,busy=false;const rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+function fill(el,n,q){const[c,t,h,b]=P[n];el.className=(el===pg?'':'front ')+c+(q?' quiet':'');el.innerHTML=(t?`<span class="tag">${t}</span>`:'')+(n?`<h2>${h}</h2>`:`<h1>${h}</h1>`)+b;el.scrollTop=0;if(!q)[...el.children].forEach((k,j)=>k.style.animationDelay=(.35+j*.11)+'s')}
+function ui(){document.getElementById('ct').textContent=(i+1)+' / '+P.length;document.querySelector('#bar div').style.width=(i+1)/P.length*100+'%';pv.disabled=!i;nx.disabled=i==P.length-1}
+function go(n){if(busy||n<0||n>=P.length||n==i)return;const fwd=n>i;
+if(rm){i=n;fill(pg,n,1);ui();return}
+busy=true;const leaf=document.createElement('div'),f=document.createElement('div'),bk=document.createElement('div'),sh=document.createElement('div');
+leaf.className='leaf';sh.className='shade';leaf.append(f,bk);
+if(fwd){fill(f,i,1);bk.className='back '+P[i][0];fill(pg,n)}else{fill(f,n,1);bk.className='back '+P[n][0]}
+i=n;ui();wrap.append(sh,leaf);
+let kf=[{transform:'rotateY(0deg) translateZ(0)'},{transform:'rotateY(-90deg) translateZ(60px)',offset:.5},{transform:'rotateY(-180deg) translateZ(0)'}];if(!fwd)kf.reverse();
+const T={duration:950,easing:'cubic-bezier(.5,.05,.2,1)',fill:'forwards'};
+sh.animate([{opacity:0},{opacity:.75,offset:.5},{opacity:0}],{duration:950});
+leaf.animate(kf,T).finished.then(()=>{if(!fwd)fill(pg,n,1);leaf.remove();sh.remove();busy=false});}
+pv.onclick=()=>go(i-1);nx.onclick=()=>go(i+1);
+addEventListener('keydown',e=>{if(e.key=='ArrowRight')go(i+1);if(e.key=='ArrowLeft')go(i-1)});
+let x0=null;pg.addEventListener('touchstart',e=>x0=e.touches[0].clientX,{passive:true});
+pg.addEventListener('touchend',e=>{if(x0===null)return;const d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>60)go(i+(d<0?1:-1));x0=null});
+fill(pg,0);ui();
+</script>
+</body>
+</html>
